@@ -69,6 +69,7 @@ template: `
   methods: {
     addToCart: function () {
       this.$emit('add-to-cart', this.variants[this.selectedVariant].id);
+      this.variants[this.selectedVariant].quantity -= 1;
     },
     updateProduct: function (index) {
       this.selectedVariant = index;
